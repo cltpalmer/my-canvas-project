@@ -1,0 +1,142 @@
+/* Toolbar styling */
+.toolbar {
+  display: flex;
+  justify-content: center; /* Center the toolbar content */
+  align-items: center;
+  padding: 15px; /* Add padding around the toolbar */
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 8px; /* Rounded corners for the entire toolbar */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  gap: 15px; /* Space between each button */
+}
+
+/* Styling for buttons in the toolbar */
+.toolbar button {
+  background-color: #ffffff; /* White background for buttons */
+  border: 1px solid #cccccc; /* Light border around the buttons */
+  border-radius: 50px; /* Make buttons rounded */
+  padding: 10px 20px; /* Add padding for larger click area */
+  cursor: pointer; /* Change cursor to pointer for better UX */
+  font-size: 16px; /* Increase font size for readability */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Hover effect for buttons */
+.toolbar button:hover {
+  background-color: #e0e0e0; /* Light gray background on hover */
+}
+
+/* Color picker input styling */
+input[type="color"] {
+  padding: 10px; /* Add padding for uniformity */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Make the color picker rounded */
+  cursor: pointer; /* Pointer cursor for color picker */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for color picker */
+input[type="color"]:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Bigger shadow on hover */
+}
+
+/* Input slider styling for uniform look */
+input[type="range"] {
+  margin-left: 10px; /* Spacing around sliders */
+  width: 150px; /* Set width for uniformity */
+}
+
+/* Styling for the trash button */
+.trash-button {
+  background-color: rgba(0, 0, 0, 0.25); /* Black background with 25% opacity */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trash-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.trash-button:hover {
+  background-color: rgba(0, 0, 0, 0.35); /* Slightly darker on hover */
+}
+
+/* Floating Icon Button (for Text, Shape, Layers) */
+.floating-icon-button {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-icon-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Button hover effect */
+.floating-icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.35); /* Slightly darker on hover */
+}
+
+/* Styling for the wrapper that holds the shape */
+.shape-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  border: 2px solid transparent; /* Default border is transparent */
+  transition: border 0.2s ease-in-out;
+}
+
+/* Orange selection border for selected elements */
+.shape-wrapper.selected {
+  border: 2px solid orange;
+}
+
+/* Styling for the shape inside the wrapper */
+.shape-content {
+  width: 100px;
+  height: 100px;
+  background-color: #00FF00;
+  border-radius: 7px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Resize handles on the wrapper */
+.resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.resize-handle.top-left { top: -5px; left: -5px; cursor: nwse-resize; }
+.resize-handle.top-right { top: -5px; right: -5px; cursor: nesw-resize; }
+.resize-handle.bottom-left { bottom: -5px; left: -5px; cursor: nesw-resize; }
+.resize-handle.bottom-right { bottom: -5px; right: -5px; cursor: nwse-resize; }
+
+/* Example media query to adjust layout for smaller screens */
+@media (max-width: 600px) {
+  .toolbar {
+    flex-direction: column; /* Stack toolbar items vertically */
+    gap: 10px; /* Adjust spacing for smaller layout */
+  }
+}

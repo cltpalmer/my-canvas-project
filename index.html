@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Canvas</title>
+  <link rel="stylesheet" href="styles/canvas.css">
+  <link rel="stylesheet" href="styles/toolbar.css">
+</head>
+<body>
+  <!-- Canvas area where shapes will be added -->
+  <div id="canvas"></div>
+
+  <!-- Toolbar at the top -->
+  <div class="toolbar" id="toolbar">
+    <button id="opacityButton">Opacity</button>
+    <button id="shadowButton">Shadow</button>
+    <button id="radiusButton">Radius</button>
+    <input type="color" id="colorPicker" value="#00FF00"> <!-- Rounded Color Swatch -->
+
+    <!-- Trash button -->
+    <button id="trashButton" class="trash-button">
+      <img src="https://res.cloudinary.com/dbed05imm/image/upload/trash_zsqnyu.png" alt="Trash Icon">
+    </button>
+  </div>
+
+  <!-- New floating controls for square shadow and radius (Initially hidden) -->
+  <div class="square-controls" id="squareControls">
+    <label>Opacity</label>
+    <input type="range" id="opacitySlider" min="0" max="100" value="100" style="display: none;">
+    <label>Shadow Size</label>
+    <input type="range" id="shadowSlider" min="0" max="50" value="16" style="display: none;">
+    <label>Corner Radius</label>
+    <input type="range" id="radiusSlider" min="0" max="50" value="7" style="display: none;">
+  </div>
+
+  <!-- Floating column for add text, shape, and layers buttons -->
+  <div class="floating-column">
+    <!-- Add Text Button (Icon only) -->
+    <div id="addTextButton" class="floating-icon-button">
+      <img src="https://res.cloudinary.com/dbed05imm/image/upload/textico_vdoj8o.png" alt="Add Text Icon">
+    </div>
+
+    <!-- Add Square Button (Icon only) -->
+    <div id="addSquareButton" class="floating-icon-button">
+      <img src="https://res.cloudinary.com/dbed05imm/image/upload/creative-league-logo1_yljonb.png" alt="Add Square Icon">
+    </div>
+
+    <!-- Floating button for layers (Icon) -->
+    <div id="layersIcon" class="floating-icon-button">
+      <img src="https://res.cloudinary.com/dbed05imm/image/upload/GraphicDesignVision_jikcct.png" alt="Layers Icon">
+    </div>
+  </div>
+
+  <!-- Layers Panel (Initially hidden) -->
+  <div class="layers-panel" id="layersPanel" style="display: none;">
+    <div id="collapseButton" class="collapse-arrow">&#9660;</div> <!-- Down arrow to collapse -->
+    <h3>Layers</h3>
+    <ul id="layersList">
+      <!-- Layers will be dynamically added here -->
+    </ul>
+  </div>
+
+  <!-- Importing scripts -->
+  <script type="module" src="scripts/drag.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/resize.js"></script>
+  <script type="module" src="scripts/color.js"></script>
+  <script type="module" src="scripts/controls.js"></script>
+  <script type="module" src="scripts/layers.js"></script>
+  <script type="module" src="scripts/text.js"></script>
+
+</body>
+</html>
